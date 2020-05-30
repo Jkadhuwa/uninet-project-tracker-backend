@@ -1,0 +1,8 @@
+{
+  "name": "uninet-project-tracker-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Jkadhuwa/uninet-project-tracker-backend.git",
+  "author": "Jkadhuwa <justinemsinda@gmail.com>",
+  "license": "MIT"
+}
