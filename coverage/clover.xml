@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1591092393753" clover="3.2.0">
+  <project timestamp="1591092393753" name="All files">
+    <metrics statements="42" coveredstatements="37" conditionals="13" coveredconditionals="8" methods="9" coveredmethods="7" elements="64" coveredelements="52" complexity="0" loc="42" ncloc="42" packages="4" files="7" classes="7"/>
+    <package name="src">
+      <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="0"/>
+      <file name="index.js" path="/home/jkadhuwa/Projects/Uninet/uninet-project-tracker-backend/src/index.js">
+        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.config">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="config.js" path="/home/jkadhuwa/Projects/Uninet/uninet-project-tracker-backend/src/config/config.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="logging.js" path="/home/jkadhuwa/Projects/Uninet/uninet-project-tracker-backend/src/config/logging.js">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="33" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routes">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/home/jkadhuwa/Projects/Uninet/uninet-project-tracker-backend/src/routes/index.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="userRouter.js" path="/home/jkadhuwa/Projects/Uninet/uninet-project-tracker-backend/src/routes/userRouter.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.sequelize.models">
+      <metrics statements="21" coveredstatements="19" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="5"/>
+      <file name="index.js" path="/home/jkadhuwa/Projects/Uninet/uninet-project-tracker-backend/src/sequelize/models/index.js">
+        <metrics statements="17" coveredstatements="15" conditionals="9" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="40" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+      </file>
+      <file name="user.js" path="/home/jkadhuwa/Projects/Uninet/uninet-project-tracker-backend/src/sequelize/models/user.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
