@@ -5,7 +5,7 @@ config();
 
 
 const {
-  DB_NAME_PROD, DB_NAME_TEST, DB_NAME_DEV, DB_USER, DB_PASS, DB_HOST, DB_PORT,
+  DB_NAME_PROD, DB_NAME_DEV, DB_USER, DB_PASS, DB_HOST, DB_PORT,
 } = process.env;
 module.exports = {
 
@@ -19,9 +19,9 @@ module.exports = {
     logging: false,
   },
   test: {
-    database: DB_NAME_TEST,
-    username: DB_USER,
-    password: DB_PASS,
+    database: 'test_project_mgt',
+    username: 'postgres',
+    password: 'Uninet41234',
     host: DB_HOST,
     port: DB_PORT,
     dialect: 'postgres',
