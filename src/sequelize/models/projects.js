@@ -10,12 +10,11 @@ module.exports = (sequelize, DataTypes) => {
     Projects.hasMany(models.ProjectItem, {
       as: 'subProjects',
       foreignKey: 'project_id',
-    });
+    }, { onDelete: 'cascade' });
     Projects.hasMany(models.Accounts, {
       as: 'account',
       foreignKey: 'project_id',
-
-    });
+    }, { onDelete: 'cascade' });
     Projects.belongsTo(models.Locations, {
       as: 'location',
       foreignKey: 'location_id',

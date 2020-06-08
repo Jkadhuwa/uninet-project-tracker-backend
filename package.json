@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
     "lint": "eslint . --ext .js",
-    "pretest": "NODE_ENV=test yarn migrate:undo && NODE_ENV=test yarn migrate",
+    "pretest": "NODE_ENV=test yarn migrate:undo && NODE_ENV=test yarn migrate yarn seed:undo && NODE_ENV=test yarn seed",
     "test": "jest --coverage --config ./jest.config.json --detectOpenHandles --forceExit",
     "migrate": "sequelize db:migrate",
     "migrate:undo": "sequelize db:migrate:undo:all",
@@ -20,6 +20,8 @@
     "bcrypt": "^4.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.4",
     "pg": "^8.2.1",
     "pg-hstore": "^2.3.3",

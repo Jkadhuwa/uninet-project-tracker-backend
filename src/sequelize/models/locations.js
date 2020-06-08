@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     Locations.hasMany(models.Projects, {
       as: 'projects',
       foreignKey: 'location_id',
-    });
+    }, { onDelete: 'cascade' });
   };
   return Locations;
 };

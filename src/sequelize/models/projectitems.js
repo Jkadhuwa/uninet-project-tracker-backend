@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     ProjectItem.hasMany(models.Accounts, {
       as: 'account',
       foreignKey: 'projectItem_id',
-    });
+    }, { onDelete: 'cascade' });
   };
   return ProjectItem;
 };
