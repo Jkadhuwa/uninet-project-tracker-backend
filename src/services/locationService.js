@@ -7,6 +7,16 @@ class LocationService {
     );
     return ({ location, isNew });
   }
+
+  static async getLocations() {
+    const locations = await db.Location.findAll();
+    return locations;
+  }
+
+  static async getLocationById(id) {
+    const location = await db.Location.findOne({ where: { id } });
+    return location;
+  }
 }
 
 export default LocationService;
