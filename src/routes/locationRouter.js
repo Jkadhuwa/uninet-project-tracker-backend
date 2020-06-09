@@ -6,5 +6,7 @@ const locationRouter = express.Router();
 
 
 locationRouter.post('/create', validator.locationCreataionValidation, LocationController.createLocation);
+locationRouter.get('/', LocationController.getLocations);
+locationRouter.get('/:id', LocationController.getLocationById);
 
 export default locationRouter;
