@@ -44,4 +44,56 @@ describe('Login Validator', () => {
       expect(next).toHaveBeenCalled();
     });
   });
+
+  describe('Validate Location creation', () => {
+    it('Should return an error when location name is undefined', () => {
+      const locationValidator = jest.spyOn(validator, 'locationCreataionValidation');
+      const req = {
+        body: { email: '' },
+      };
+      validator.locationCreataionValidation(req, res, next);
+      expect(locationValidator).toHaveBeenCalled();
+      expect(res.status).toHaveBeenCalledWith(400);
+      expect(res.json).toHaveBeenCalledWith({ error: 'Location name is required' });
+    });
+
+    it('Should return a error when location name is empty', () => {
+      const locationValidator = jest.spyOn(validator, 'locationCreataionValidation');
+      const req = {
+        body: { name: '12546' },
+      };
+      validator.locationCreataionValidation(req, res, next);
+      expect(locationValidator).toHaveBeenCalled();
+      expect(res.status).toHaveBeenCalledWith(400);
+      expect(res.json).toHaveBeenCalledWith({ error: 'Location name should be string with no special characters' });
+    });
+
+    it('Should return a error when location name is empty', () => {
+      const locationValidator = jest.spyOn(validator, 'locationCreataionValidation');
+      const req = {
+        body: { name: 12546 },
+      };
+      validator.locationCreataionValidation(req, res, next);
+      expect(locationValidator).toHaveBeenCalled();
+      expect(res.status).toHaveBeenCalledWith(400);
+      expect(res.json).toHaveBeenCalledWith({ error: 'Location name must be a string' });
+    });
+    it('Should return a error when location name is less than 3 characters', () => {
+      const locationValidator = jest.spyOn(validator, 'locationCreataionValidation');
+      const req = {
+        body: { name: 'ml' },
+      };
+      validator.locationCreataionValidation(req, res, next);
+      expect(locationValidator).toHaveBeenCalled();
+      expect(res.status).toHaveBeenCalledWith(400);
+      expect(res.json).toHaveBeenCalledWith({ error: 'Location name must be at least 3 characters long' });
+    });
+    it('Should call next function', () => {
+      const req = {
+        body: { name: 'Malindi' },
+      };
+      validator.locationCreataionValidation(req, res, next);
+      expect(next).toHaveBeenCalled();
+    });
+  });
 });
