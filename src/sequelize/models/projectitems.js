@@ -7,11 +7,6 @@ module.exports = (sequelize, DataTypes) => {
     priority: DataTypes.STRING,
   }, {});
   ProjectItem.associate = (models) => {
-    ProjectItem.belongsTo(models.Projects, {
-      as: 'project',
-      foreignKey: 'project_id',
-    });
-
     ProjectItem.hasMany(models.Accounts, {
       as: 'account',
       foreignKey: 'projectItem_id',

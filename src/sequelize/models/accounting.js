@@ -1,12 +1,15 @@
 
 module.exports = (sequelize, DataTypes) => {
-  const Accounts = sequelize.define('Accounts', {
+  const Account = sequelize.define('Accounts', {
     projected_amount: DataTypes.STRING,
     dispersed_amount: DataTypes.STRING,
     dispersed_date: DataTypes.STRING,
   }, {});
-  Accounts.associate = () => {
-    // associations can be defined here
+  Account.associate = (models) => {
+    Account.belongsTo(models.ProjectItem, {
+      as: 'project_item',
+      foreignKey: 'projectItem_id',
+    });
   };
-  return Accounts;
+  return Account;
 };

@@ -1,13 +1,13 @@
 
 module.exports = (sequelize, DataTypes) => {
-  const Locations = sequelize.define('Locations', {
+  const Location = sequelize.define('Location', {
     name: DataTypes.STRING,
   }, {});
-  Locations.associate = (models) => {
-    Locations.hasMany(models.Projects, {
+  Location.associate = (models) => {
+    Location.hasMany(models.Projects, {
       as: 'projects',
       foreignKey: 'location_id',
     }, { onDelete: 'cascade' });
   };
-  return Locations;
+  return Location;
 };

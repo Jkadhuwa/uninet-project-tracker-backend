@@ -16,13 +16,6 @@ module.exports = {
     dispersed_date: {
       type: Sequelize.STRING,
     },
-    project_id: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'Projects',
-        key: 'id',
-      },
-    },
     projectItem_id: {
       type: Sequelize.INTEGER,
       references: {
